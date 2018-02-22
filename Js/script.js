@@ -5,18 +5,30 @@ var table = $('table');
 var messages = $('.messages');
 var turn = $('.turn');
 displayNextPlayer(turn, player);
-var rest = $('#reset');
+var reset = $('#reset');
 
-reset.click(function(event){
+//reset.click(function(event){
 
-	player
-});
+	//player
+//});
+
+function setNextPlayer(player) {
+  if(player == 1) {
+    return player = 2;
+  } else {
+    return player = 1;
+  }
+}
+
+function displayNextPlayer(turn, player) {
+  turn.html('Player turn : '+player);
+}
 
 function checkIfPlayerWon(table, pattern) {
   var won = 0;
-  if(table.find('.item1').hasClass(pattern) && table.find('.item2').hasClass(pattern) && table.find('.item3').hasClass(pattern)) {
+  if(table.find('.0').hasClass(pattern) && table.find('.1').hasClass(pattern) && table.find('.2').hasClass(pattern)) {
     won = 1;
-  } else if (table.find('.data-num1').hasClass(pattern) && table.find('.item4').hasClass(pattern) && table.find('.item7').hasClass(pattern)) {
+  } else if (table.find('.1').hasClass(pattern) && table.find('.item4').hasClass(pattern) && table.find('.item7').hasClass(pattern)) {
     won = 1;
   } else if (table.find('.item1').hasClass(pattern) && table.find('.item5').hasClass(pattern) && table.find('.item9').hasClass(pattern)) {
     won = 1;
@@ -34,11 +46,12 @@ function checkIfPlayerWon(table, pattern) {
   return won;
 }
 
-function reset(table) {
-  table.find('td').each(function() {
-    $(this).removeClass('circle').removeClass('cross');
+    reset.onclick('table') {
+    table.find('td').each(function() {
+    $(this).removeClass('O').removeClass('X');
   });
-}
+
+};
 
 
 

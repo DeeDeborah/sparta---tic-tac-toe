@@ -15,6 +15,7 @@ td {
   height: 200px;
   text-align: center;
   font-size: 8em;
+  cursor: pointer;
 }
 
 .X {
@@ -39,6 +40,7 @@ td {
   margin-top: 20px;
   background-color: black;
   color: yellow;
+
 }
 
 #reset:hover {
