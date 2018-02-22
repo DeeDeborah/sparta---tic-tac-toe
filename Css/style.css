@@ -3,6 +3,12 @@ table {
   margin: 0 auto;
   border-radius:10px;
 }
+
+div{
+text-align: center;
+
+}
+
 td {
   border: 1px solid black;
   width: 200px;
