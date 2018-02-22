@@ -32,10 +32,10 @@ td {
   cursor: pointer;
   margin-top: 20px;
   background-color: black;
-  color: white;
+  color: yellow;
 }
 
-#reset:hover{
-  background: white;
-  color: black;
+#reset:hover {
+  background: black;
+  color: white;
 }
